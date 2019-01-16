@@ -20,20 +20,21 @@ function div(n1, n2) {
 
 $(document).ready(function() {
 
-  $("form#calculate").submit(function(event) {
+  $("#calculate").submit(function(event) {
     event.preventDefault();
     var number1 = parseInt($("#num1").val());
     var number2 = parseInt($("#num2").val());
     var operationInput = $("input:radio[name=operation]:checked").val();
+    //$("#addResult").text(result);
 
     if (operationInput==="add") {
-      document.write("Your total is " + add(number1, number2));
+      $("#calResult").text(add(number1, number2));
     } else if (operationInput==="sub") {
-      document.write("Your total is " + sub(number1, number2));
+      $("#calResult").text(sub(number1, number2));
     } else if (operationInput==="mult") {
-      document.write("Your total is " + mult(number1, number2));
+      $("#calResult").text(mult(number1, number2));
     } else if (operationInput==="div") {
-      document.write("Your total is " + div(number1, number2));
+      $("#calResult").text(div(number1, number2));
     } else {
       document.write("Not a valid function");
     }
