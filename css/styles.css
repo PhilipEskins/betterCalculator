@@ -10,3 +10,8 @@ body {
   padding: 5px;
   text-align: center;
 }
+.list {
+  position: absolute;
+  left: 50%;
+  text-align: left;
+}
