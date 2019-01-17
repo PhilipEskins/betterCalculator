@@ -15,7 +15,12 @@ function mult(n1, n2) {
 }
 
 function div(n1, n2) {
-  return n1 / n2;
+  var answer = n1 / n2;
+  if (Math.floor(answer) === answer) {
+    return answer;
+  } else {
+  return answer.toFixed(2);
+  }
 }
 
 $(document).ready(function() {
